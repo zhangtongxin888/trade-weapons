@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "run_id": "trade-weapons-20260819-213401",
+  "reviewed_by": "Codex",
+  "reviewed_at": "2026-08-19T14:38:49Z",
+  "design_package": ".launch/design/sites-design-v1.json",
+  "design_package_sha256": "ef45a2868f85e0654490264772b9e8f3d7e731ea18a069a67faae6141338fdb6",
+  "status": "approved",
+  "approved": true,
+  "viewport_reviews": {
+    "375": {
+      "status": "passed",
+      "evidence": ".launch/acceptance/screenshots/home-375.png",
+      "result": "Mobile menu, hero hierarchy, primary tutorial CTA, content stacking, footer, and horizontal overflow passed."
+    },
+    "768": {
+      "status": "passed",
+      "evidence": ".launch/acceptance/screenshots/home-768.png",
+      "result": "Header navigation, hero layout, cards, section transitions, and horizontal overflow passed."
+    },
+    "1440": {
+      "status": "passed",
+      "evidence": ".launch/acceptance/screenshots/home-1440.png",
+      "result": "Desktop hierarchy, reading width, grid balance, section rhythm, and horizontal overflow passed."
+    }
+  },
+  "primary_cta_review": {
+    "status": "passed",
+    "target": "/beginner-guide/#quick-start",
+    "target_visible": true,
+    "evidence": ".launch/acceptance/screenshots/beginner-guide-375-viewport.png"
+  },
+  "fact_review": {
+    "status": "passed",
+    "research_approval_sha256": "a5acfa333999b1c701503d02d97b06f44d33103f7cec396b3244a39be933752f",
+    "approved_fact_count": 10,
+    "result": "Published factual claims remain inside the approved fact set."
+  },
+  "asset_review": {
+    "status": "passed",
+    "social_card_sha256": "442ac15c573ed6b8cb764ffe559176e744ab7b516971c148f8f6793971be5e14",
+    "result": "The social card is original, and the site uses original CSS shapes with no unlicensed third-party artwork."
+  },
+  "accessibility_review": {
+    "status": "passed",
+    "result": "Skip link, semantic navigation, mobile details menu, visible focus behavior, contrast, and keyboard-compatible controls passed."
+  },
+  "issues_and_resolution": [
+    {
+      "issue": "A stitched full-page capture visually repositioned the fixed, off-screen skip link.",
+      "resolution": "A normal 375px viewport capture and computed rectangle confirmed the link remained above the viewport until focused; no production layout defect was present."
+    }
+  ],
+  "console_review": {
+    "status": "passed",
+    "errors_or_warnings": 0
+  }
+}
