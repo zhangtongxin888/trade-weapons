@@ -1,8 +1,8 @@
 # Trade Weapons launch evidence
 
-Checked at: `2026-08-19T14:50:26Z`
+Checked at: `2026-08-19T16:32:47Z`
 
-Current status: responsive browser review and the Vercel production deployment are complete. Formal-domain cutover is blocked because `tradeweapons.wiki` is not present in the currently signed-in Spaceship account, so no DNS change can be made safely. The formal domain, HTTPS, online canonical checks, GSC ownership, and GSC Sitemap submission are not complete.
+Current status: responsive review and the Vercel production deployment are complete. The authoritative DNS provider is Cloudflare (`fay.ns.cloudflare.com` and `kipp.ns.cloudflare.com`), but `tradeweapons.wiki` is not visible to the only Cloudflare account currently authenticated in Wrangler, account ID `bbd34aeeef02a484fc6e1bae4e577e3f`. The official zone-list API completed successfully but returned no matching zone, so no DNS write was attempted. Formal-domain DNS, HTTPS, and online canonical checks remain blocked. GSC was explicitly outside this recovery task and was not opened.
 
 | Acceptance item | Production URL or resource | Checked at | Actual result | Evidence |
 | --- | --- | --- | --- | --- |
@@ -20,15 +20,15 @@ Current status: responsive browser review and the Vercel production deployment a
 | Browser review at 375/768/1440 | Local production build | `2026-08-19T14:38:49Z` | Pass | `.launch/acceptance/design-approved.json` is approved; four viewport screenshots are recorded under `.launch/acceptance/screenshots/`; no horizontal overflow or console errors were found |
 | Deployment ID and status | Vercel project `prj_qXCJD894Th1Fm7W8qoJ15jv4NyRh` | `2026-08-19T14:42:43Z` | Pass | Deployment `dpl_1p9qc1YmziiUFoPFJCKgj9x9TsFS` is `READY`, target `production`, URL `https://trade-weapons-njvmuu5xl-zhangtongxin888s-projects.vercel.app` |
 | Git repository connection | Vercel project `trade-weapons` | `2026-08-19T14:40:19Z` | Pass | Vercel linked `https://github.com/zhangtongxin888/trade-weapons` while creating the project |
-| DNS ownership and rollback baseline | `tradeweapons.wiki` | `2026-08-19T14:47:46Z` | Blocked before write | RDAP shows Spaceship, Inc. as registrar and registration on `2026-08-19`; authoritative nameservers are `fay.ns.cloudflare.com` and `kipp.ns.cloudflare.com`; current apex resolves to Cloudflare parking and `www` has no address record |
-| Spaceship account access | Spaceship Domain Manager | `2026-08-19T14:48:45Z` | Blocked | Exact and partial searches in the signed-in account returned 0 matching domains. No DNS record was edited because domain ownership could not be resolved safely in that account |
-| Required apex DNS | `tradeweapons.wiki` | `2026-08-19T14:44:55Z` | Pending correct Spaceship account | Vercel strict verification requires `@ CNAME 21f854500b463559.vercel-dns-017.com.` with proxy disabled; current apex still serves a Spaceship parking page through Cloudflare |
-| Required `www` DNS | `www.tradeweapons.wiki` | `2026-08-19T14:44:55Z` | Pending correct Spaceship account | Vercel strict verification requires `www CNAME 21f854500b463559.vercel-dns-017.com.`; current `www` has no DNS answer |
-| Main-domain HTTPS | `https://tradeweapons.wiki` | `2026-08-19T14:34:01Z` | Blocked | HTTPS did not complete and the HTTP host served a parking page, not this deployment |
-| `www` redirect | `https://www.tradeweapons.wiki` | `2026-08-19T14:49:11Z` | Configured in Vercel; not live | Project-domain configuration sets `www.tradeweapons.wiki` to redirect to `tradeweapons.wiki` with status 308; DNS and TLS are still missing |
-| Production canonical and HTTP checks | Seven `https://tradeweapons.wiki` page URLs | `2026-08-19T14:50:26Z` | Blocked by DNS and TLS | Formal-domain verification cannot run until the Spaceship records are applied and Vercel reports `misconfigured: false` |
-| GSC ownership | `sc-domain:tradeweapons.wiki` | `2026-08-19T14:50:26Z` | Not attempted; prerequisite blocked | GSC was not opened because the formal HTTPS site and DNS control are not ready |
-| GSC Sitemap status | `https://tradeweapons.wiki/sitemap.xml` | `2026-08-19T14:50:26Z` | Not submitted | A success receipt cannot be obtained until the verified property and public formal Sitemap exist |
+| Authoritative DNS and rollback baseline | `tradeweapons.wiki` | `2026-08-19T16:31:21Z` | Provider confirmed; control blocked before write | Public DNS returns `fay.ns.cloudflare.com` and `kipp.ns.cloudflare.com`; apex still returns Cloudflare proxy addresses `104.21.77.36`, `172.67.204.4`, `2606:4700:3030::ac43:cc04`, and `2606:4700:3035::6815:4d24`; `www` still has no CNAME answer. Because the zone was not visible, its record set could not be backed up and no mutation was attempted |
+| Cloudflare zone access | Cloudflare account `bbd34aeeef02a484fc6e1bae4e577e3f` | `2026-08-19T16:31:21Z` | Blocked: zone not visible to authenticated account | Wrangler is authenticated with OAuth to exactly one account. `GET /zones?name=tradeweapons.wiki` succeeded but returned no matching zone, distinguishing this from a failed DNS write or browser issue. No credential was printed, persisted, or committed |
+| Required apex DNS | `tradeweapons.wiki` | `2026-08-19T16:32:47Z` | Blocked by Cloudflare zone/account ownership | Vercel strict verification remains `misconfigured: true`; exact recommendation is `@ CNAME 21f854500b463559.vercel-dns-017.com.` with proxy disabled. Current apex still returns the two Cloudflare proxy IPv4 values; no record was changed |
+| Required `www` DNS | `www.tradeweapons.wiki` | `2026-08-19T16:32:47Z` | Blocked by Cloudflare zone/account ownership | Vercel strict verification remains `misconfigured: true`; exact recommendation is `www CNAME 21f854500b463559.vercel-dns-017.com.`. Current `www` has no DNS answer; no record was changed |
+| Main-domain HTTPS | `https://tradeweapons.wiki` | `2026-08-19T16:32:47Z` | Blocked | A command-line HTTPS request timed out after 20 seconds with no response; the Vercel strict check remains misconfigured |
+| `www` redirect | `https://www.tradeweapons.wiki` | `2026-08-19T16:32:47Z` | Configured in Vercel; not live | Project-domain configuration sets `www.tradeweapons.wiki` to redirect to `tradeweapons.wiki` with status 308, but public DNS cannot resolve the host |
+| Production canonical and HTTP checks | Seven `https://tradeweapons.wiki` page URLs plus `robots.txt` and `sitemap.xml` | `2026-08-19T16:32:47Z` | Blocked by authoritative DNS and TLS | Formal-domain verification cannot run until the zone-controlling Cloudflare account applies the two Vercel records and strict verification reports `misconfigured: false` |
+| GSC ownership | `sc-domain:tradeweapons.wiki` | `2026-08-19T16:32:47Z` | Not attempted; outside recovery scope | This recovery was explicitly limited to non-browser Cloudflare DNS and online checks. Chrome and GSC were not opened |
+| GSC Sitemap status | `https://tradeweapons.wiki/sitemap.xml` | `2026-08-19T16:32:47Z` | Not submitted; outside recovery scope | GSC was not touched in this recovery, and the formal Sitemap is not publicly reachable yet |
 
 ## Provider record
 
@@ -36,11 +36,11 @@ Current status: responsive browser review and the Vercel production deployment a
 - Candidate design: Kimi K3 wrapper was invoked twice in a disposable directory without `.git` or a remote, but its CLI rejected the non-interactive prompt mode. Sites produced the fallback candidate in a separate disposable directory; Codex independently reviewed and rewrote the formal implementation.
 - Formal implementation, responsive browser review, verification, Vercel deployment, repository commit, and push: Codex.
 
-No external provider or sub-agent received repository credentials or access to Chrome, DNS, GSC, Cloudflare, Vercel, or deployment credentials. Codex alone used the granted Trade Weapons browser lock and deployment account.
+No external provider or sub-agent received repository credentials or access to Chrome, DNS, GSC, Cloudflare, Vercel, or deployment credentials. The earlier launch pass used the granted Trade Weapons browser lock. This recovery used only local command-line clients and official APIs; it did not initialize Chrome, open Spaceship, open GSC, or expose authentication credentials.
 
 ## Exact recovery point
 
-1. Use the Spaceship account that owns `tradeweapons.wiki`; do not change nameservers or unrelated records.
-2. Replace only conflicting apex Web records with the Vercel project-specific apex CNAME above, add the project-specific `www` CNAME, and keep both unproxied.
+1. Authenticate the local Cloudflare CLI/API to the account that owns the active `tradeweapons.wiki` zone, or grant Zone Read and DNS Edit access for that zone to account `bbd34aeeef02a484fc6e1bae4e577e3f`. Do not change nameservers.
+2. Back up the visible DNS record set, replace only conflicting apex Web records with `@ CNAME 21f854500b463559.vercel-dns-017.com.`, and add `www CNAME 21f854500b463559.vercel-dns-017.com.`. Keep both unproxied and preserve every unrelated record.
 3. Re-run strict Vercel verification for apex and `www`; require `misconfigured: false`, working TLS, and the live 308 redirect.
-4. Run the formal-domain launch verifier, then create or reuse `sc-domain:tradeweapons.wiki`, add the Google DNS verification record without replacing unrelated TXT records, submit the exact Sitemap URL, and require a successful receipt.
+4. Run the formal-domain launch verifier over all seven pages, `robots.txt`, `sitemap.xml`, and canonical tags. GSC remains a separate total-controller step and was not part of this recovery.
