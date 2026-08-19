@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "run_id": "trade-weapons-20260819-213401",
+  "reviewed_by": "Codex",
+  "reviewed_at": "2026-08-19T14:13:46Z",
+  "design_package": ".launch/design/sites-design-v1.json",
+  "design_package_sha256": "ef45a2868f85e0654490264772b9e8f3d7e731ea18a069a67faae6141338fdb6",
+  "status": "pending_browser_review",
+  "approved": false,
+  "non_browser_checks": {
+    "handoff_schema": "passed",
+    "approved_fact_references": "passed",
+    "asset_licensing": "passed",
+    "primary_cta_target": "passed: /beginner-guide/#quick-start",
+    "navigation_and_internal_links": "passed",
+    "responsive_rules_present": "passed",
+    "keyboard_semantics": "passed",
+    "lint": "passed",
+    "static_build": "passed",
+    "rendered_html_tests": "passed: 5 of 5",
+    "production_dependency_audit": "passed: 0 vulnerabilities"
+  },
+  "viewport_reviews": {
+    "375": "pending browser lock; CSS and HTML rules tested only",
+    "768": "pending browser lock; CSS and HTML rules tested only",
+    "1440": "pending browser lock; CSS and HTML rules tested only"
+  },
+  "fact_review": {
+    "status": "passed",
+    "research_approval_sha256": "a5acfa333999b1c701503d02d97b06f44d33103f7cec396b3244a39be933752f",
+    "approved_fact_count": 10,
+    "notes": "Unverified codes, values, rarities, box odds, and undocumented mechanics are either omitted or explicitly marked as unavailable or unverified."
+  },
+  "asset_review": {
+    "status": "passed",
+    "social_card_sha256": "442ac15c573ed6b8cb764ffe559176e744ab7b516971c148f8f6793971be5e14",
+    "notes": "The social card is an original generated asset; the site uses original CSS shapes and no Roblox thumbnails or third-party stock assets."
+  },
+  "blocking_condition": "The total controller has not granted the browser-exclusive lock required for visual inspection at 375, 768, and 1440 widths.",
+  "next_action": "After browser lock is granted, render the formal build at all three widths, record screenshots or equivalent evidence, and only then create design-approved.json with an approved or rejected decision."
+}

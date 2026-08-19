@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "run_id": "trade-weapons-20260819-213401",
+  "game": {
+    "official_name": "🗡️ Trade Weapons",
+    "domain": "tradeweapons.wiki"
+  },
+  "reviewed_by": "Codex",
+  "reviewed_at": "2026-08-19T13:38:58Z",
+  "research_package": ".launch/research/codex-research-v1.json",
+  "approved_fact_ids": [
+    "fact-001",
+    "fact-002",
+    "fact-003",
+    "fact-004",
+    "fact-005",
+    "fact-006",
+    "fact-007",
+    "fact-008",
+    "fact-009",
+    "fact-010"
+  ],
+  "rejected_facts": [],
+  "notes": [
+    "Official game identity, developer, place ID, and universe ID were independently checked against live Roblox APIs.",
+    "Four gameplay or progression facts were approved from current official Roblox media; one boxed-reward presentation fact is medium confidence and must be phrased cautiously.",
+    "No unverified codes, value list, weapon catalog, rarity system, crate odds, currency details, upgrade system, rebirth system, or exact live UI sequence may enter the site.",
+    "Dynamic popularity statistics were checked for identity context but intentionally excluded from site content.",
+    "All approved source URLs were rechecked through the project-mandated system proxy and returned HTTP 200; see source-verification.json."
+  ]
+}

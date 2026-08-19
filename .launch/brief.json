@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "run_id": "trade-weapons-20260819-213401",
+  "status": "predeployment_qa",
+  "game": {
+    "official_name": "Trade Weapons",
+    "roblox_url": "https://www.roblox.com/games/124993558819856/",
+    "place_id": "124993558819856",
+    "domain": "tradeweapons.wiki",
+    "research_entry": "https://new-game-radar.pages.dev/genome/game/124993558819856/"
+  },
+  "repository": {
+    "url": "https://github.com/zhangtongxin888/trade-weapons",
+    "workspace": "/Users/zhangtongxin/Documents/命运的齿轮开始转动了/trade-weapons"
+  },
+  "candidate_workspace": "/Users/zhangtongxin/Documents/命运的齿轮开始转动了/.codex-tmp/trade-weapons-sites-20260819-213401",
+  "allowed_candidate_paths": [
+    "app/",
+    "public/",
+    "package.json",
+    "package-lock.json",
+    "next.config.ts",
+    "tsconfig.json",
+    ".launch/design/sites-design-v1.json"
+  ],
+  "target_hosting": "Vercel or Cloudflare Pages using the static out directory",
+  "providers": {
+    "research": {"name": "Codex", "model": "GPT-5", "fallback_from": "Grok"},
+    "design": {"name": "Sites", "model": "vinext candidate", "fallback_from": "Kimi K3"},
+    "code": {"name": "Codex", "model": "GPT-5"}
+  },
+  "restrictions": {
+    "browser_operations_allowed": false,
+    "external_agents_may_access_git": false,
+    "external_agents_may_access_credentials": false,
+    "unapproved_facts_may_enter_site": false
+  }
+}

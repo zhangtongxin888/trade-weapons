@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "run_id": "trade-weapons-20260819-213401",
+  "checked_by": "Codex",
+  "checked_at": "2026-08-19T14:16:18Z",
+  "network_requirement": "The project instructions require foreign terminal requests to use the macOS system HTTPS proxy.",
+  "method": "HTTP GET through the configured system proxy with redirects enabled and a standard user agent.",
+  "results": [
+    {
+      "source_url": "https://games.roblox.com/v1/games?universeIds=10625493331",
+      "http_status": 200,
+      "supports_fact_ids": ["fact-001", "fact-002", "fact-003", "fact-009"]
+    },
+    {
+      "source_url": "https://apis.roblox.com/universes/v1/places/124993558819856/universe",
+      "http_status": 200,
+      "supports_fact_ids": ["fact-004"]
+    },
+    {
+      "source_url": "https://badges.roblox.com/v1/universes/10625493331/badges?limit=100&sortOrder=Asc",
+      "http_status": 200,
+      "supports_fact_ids": ["fact-010"]
+    },
+    {
+      "source_url": "https://thumbnails.roblox.com/v1/games/multiget/thumbnails?universeIds=10625493331&countPerUniverse=10&defaults=true&size=768x432&format=Png&isCircular=false",
+      "http_status": 200,
+      "supports_fact_ids": ["fact-005", "fact-006", "fact-007", "fact-008"],
+      "notes": "The official API mapped universe 10625493331 to both rbxcdn evidence URLs used in the research package."
+    },
+    {
+      "source_url": "https://tr.rbxcdn.com/180DAY-7d9af4e793401afe1376481a2f3ca6ef/768/432/Image/Png/noFilter",
+      "http_status": 200,
+      "supports_fact_ids": ["fact-005", "fact-006", "fact-007"],
+      "role": "image_evidence"
+    },
+    {
+      "source_url": "https://tr.rbxcdn.com/180DAY-22953b50506d6d06460efcb066c95271/768/432/Image/Png/noFilter",
+      "http_status": 200,
+      "supports_fact_ids": ["fact-008"],
+      "role": "image_evidence"
+    }
+  ],
+  "notes": [
+    "A direct non-proxied request may receive a Roblox availability block in this environment; that path is outside the mandated network configuration.",
+    "All approved source URLs returned HTTP 200 through the required proxy during this verification."
+  ]
+}

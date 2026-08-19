@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "run_id": "trade-weapons-20260819-213401",
+  "game": {
+    "official_name": "🗡️ Trade Weapons",
+    "domain": "tradeweapons.wiki"
+  },
+  "provider": {
+    "name": "Sites",
+    "model": "Sites vinext starter with Codex implementation",
+    "generated_at": "2026-08-19T14:01:27Z"
+  },
+  "research_approval_sha256": "a5acfa333999b1c701503d02d97b06f44d33103f7cec396b3244a39be933752f",
+  "status": "ready_for_review",
+  "fallback_reason": "Kimi K3 CLI 0.37.2 rejected both permitted non-interactive wrapper invocations because --prompt cannot be combined with --auto or --yolo.",
+  "candidate_workspace": "/Users/zhangtongxin/Documents/命运的齿轮开始转动了/.codex-tmp/trade-weapons-sites-20260819-213401",
+  "design_system": {
+    "theme": "Premium tactical trade ledger",
+    "palette": {
+      "bg": "#080f1d",
+      "surface": "#142238",
+      "text": "#f7f2e8",
+      "accent": "#e6b75b",
+      "verification": "#6be5e2",
+      "warning": "#ff8c7a"
+    },
+    "font_strategy": "System sans for interface and body copy, Georgia serif for editorial headlines, system monospace for evidence labels.",
+    "spacing_scale": ["0.5rem", "0.75rem", "1rem", "1.5rem", "2rem", "3rem", "5rem", "7.5rem"],
+    "responsive_rules": [
+      "At 1440px the content shell caps at 1180px and homepage narrative sections use two- to four-column layouts.",
+      "At 768px hero, loop, mistakes, and guide content collapse to single-column reading order while related links become a two-column footer-like block.",
+      "At 375px desktop navigation becomes a keyboard-accessible details menu, all cards stack, CTA controls span the available width, and long IDs wrap without overflow."
+    ]
+  },
+  "homepage": {
+    "hero": {
+      "headline": "Make your next trade with clear eyes.",
+      "subheadline": "Learn what official media confirms, compare visible income labels, and decline unclear offers.",
+      "primary_cta": {
+        "label": "Start the Beginner Guide",
+        "target": "/beginner-guide/#quick-start"
+      },
+      "secondary_cta": {
+        "label": "See verified facts",
+        "target": "#verified-facts"
+      }
+    },
+    "sections": [
+      "Verified identity strip",
+      "Three-decision quick start",
+      "Five-beat core gameplay loop",
+      "Four-stage progression method",
+      "Common mistakes",
+      "FAQ preview",
+      "Source transparency CTA"
+    ]
+  },
+  "page_map": [
+    {"path": "/", "purpose": "Homepage and source-checked learning paths"},
+    {"path": "/beginner-guide/", "purpose": "Quick start, first ten minutes, and pre-accept checklist"},
+    {"path": "/core-loop/", "purpose": "Evidence-backed hold-read-compare-decide-repeat loop"},
+    {"path": "/progression/", "purpose": "Advanced comparison and record-keeping method"},
+    {"path": "/mistakes/", "purpose": "Five common errors and safer alternatives"},
+    {"path": "/faq/", "purpose": "Verified answers with FAQ structured data"},
+    {"path": "/sources/", "purpose": "Official source ledger, confidence labels, and forbidden claims"}
+  ],
+  "components": [
+    "SiteChrome",
+    "GuidePage",
+    "Hero trade board",
+    "Verified fact strip",
+    "Guide step list",
+    "Source ledger",
+    "FAQ disclosures",
+    "Responsive navigation"
+  ],
+  "assets": [
+    {
+      "path": "public/og.png",
+      "source": "Original OpenAI image generation for this project",
+      "license": "Project-owned generated asset; no third-party artwork used",
+      "purpose": "Homepage social preview"
+    },
+    {
+      "path": "public/favicon.png",
+      "source": "Cropped derivative of public/og.png",
+      "license": "Project-owned generated asset",
+      "purpose": "Site icon"
+    },
+    {
+      "path": "app/globals.css",
+      "source": "Original CSS shapes and layout",
+      "license": "Project code",
+      "purpose": "Trade board, weapon silhouettes, ledger styling, and responsive layout"
+    }
+  ],
+  "approved_fact_ids_used": [
+    "fact-001",
+    "fact-002",
+    "fact-003",
+    "fact-004",
+    "fact-005",
+    "fact-006",
+    "fact-007",
+    "fact-008",
+    "fact-009",
+    "fact-010"
+  ],
+  "files_changed": [
+    "app/_components/GuidePage.tsx",
+    "app/_components/SiteChrome.tsx",
+    "app/_lib/site.ts",
+    "app/page.tsx",
+    "app/layout.tsx",
+    "app/globals.css",
+    "app/beginner-guide/page.tsx",
+    "app/core-loop/page.tsx",
+    "app/progression/page.tsx",
+    "app/mistakes/page.tsx",
+    "app/faq/page.tsx",
+    "app/sources/page.tsx",
+    "app/robots.ts",
+    "app/sitemap.ts",
+    "next.config.ts",
+    "package.json",
+    "package-lock.json",
+    "public/og.png",
+    "public/favicon.png",
+    "tests/site.test.mjs"
+  ],
+  "preview_command": "npm run dev",
+  "build_command": "npm run build",
+  "notes": [
+    "No browser preview, remote hosting, repository operation, or deployment was performed in the candidate workspace.",
+    "The largest hero CTA is an internal link to /beginner-guide/#quick-start; the Roblox link is smaller and secondary.",
+    "Every uncertain mechanic is either omitted or explicitly labeled as unverified."
+  ]
+}

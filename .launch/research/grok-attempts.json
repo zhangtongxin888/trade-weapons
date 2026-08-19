@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "run_id": "trade-weapons-20260819-213401",
+  "provider": "Grok",
+  "wrapper_version": "grok 1.0.5 (5115b46bc909)",
+  "attempts": [
+    {
+      "attempt": 1,
+      "result": "invalid_format",
+      "output_summary": "Returned only a statement that research would be gathered; no JSON research package was produced."
+    },
+    {
+      "attempt": 2,
+      "result": "invalid_format",
+      "output_summary": "Format-correction retry again returned only a planning statement; no JSON research package was produced."
+    }
+  ],
+  "final_status": "fallback_to_codex_research",
+  "fallback_reason": "Grok failed to return structured research after the initial call and the single permitted retry."
+}

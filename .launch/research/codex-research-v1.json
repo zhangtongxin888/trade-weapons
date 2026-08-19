@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "run_id": "trade-weapons-20260819-213401",
+  "game": {
+    "official_name": "🗡️ Trade Weapons",
+    "domain": "tradeweapons.wiki",
+    "roblox_url": "https://www.roblox.com/games/124993558819856/Trade-Weapons",
+    "place_id": "124993558819856",
+    "universe_id": "10625493331",
+    "developer": "Jew Trade & Clothing LLC"
+  },
+  "provider": {
+    "name": "Codex",
+    "model": "GPT-5",
+    "generated_at": "2026-08-19T13:38:58Z"
+  },
+  "status": "complete",
+  "fallback_reason": "Grok failed to return structured research after two real wrapper calls.",
+  "facts": [
+    {
+      "id": "fact-001",
+      "category": "identity",
+      "subject": "official_game",
+      "claim": "The official Roblox experience is named 🗡️ Trade Weapons and its canonical path uses place ID 124993558819856.",
+      "source_url": "https://games.roblox.com/v1/games?universeIds=10625493331",
+      "source_type": "official",
+      "checked_at": "2026-08-19T13:36:49Z",
+      "confidence": "high"
+    },
+    {
+      "id": "fact-002",
+      "category": "identity",
+      "subject": "developer",
+      "claim": "Roblox lists the creator as the group Jew Trade & Clothing LLC, group ID 761176814.",
+      "source_url": "https://games.roblox.com/v1/games?universeIds=10625493331",
+      "source_type": "official",
+      "checked_at": "2026-08-19T13:36:49Z",
+      "confidence": "high"
+    },
+    {
+      "id": "fact-003",
+      "category": "identity",
+      "subject": "place_id",
+      "claim": "The root place ID is 124993558819856.",
+      "source_url": "https://games.roblox.com/v1/games?universeIds=10625493331",
+      "source_type": "official",
+      "checked_at": "2026-08-19T13:36:49Z",
+      "confidence": "high"
+    },
+    {
+      "id": "fact-004",
+      "category": "identity",
+      "subject": "universe_id",
+      "claim": "Roblox maps place ID 124993558819856 to universe ID 10625493331.",
+      "source_url": "https://apis.roblox.com/universes/v1/places/124993558819856/universe",
+      "source_type": "official",
+      "checked_at": "2026-08-19T13:36:15Z",
+      "confidence": "high"
+    },
+    {
+      "id": "fact-005",
+      "category": "gameplay",
+      "subject": "gameplay",
+      "claim": "Official experience media depicts a weapon-for-weapon trade offer with separate offered and received weapon panels.",
+      "source_url": "https://thumbnails.roblox.com/v1/games/multiget/thumbnails?universeIds=10625493331&countPerUniverse=10&defaults=true&size=768x432&format=Png&isCircular=false",
+      "evidence_url": "https://tr.rbxcdn.com/180DAY-7d9af4e793401afe1376481a2f3ca6ef/768/432/Image/Png/noFilter",
+      "source_type": "official",
+      "checked_at": "2026-08-19T13:37:44Z",
+      "confidence": "high"
+    },
+    {
+      "id": "fact-006",
+      "category": "gameplay",
+      "subject": "gameplay",
+      "claim": "The official trade artwork shows a green accept control and a red decline control, so players should review an offer before choosing either outcome.",
+      "source_url": "https://thumbnails.roblox.com/v1/games/multiget/thumbnails?universeIds=10625493331&countPerUniverse=10&defaults=true&size=768x432&format=Png&isCircular=false",
+      "evidence_url": "https://tr.rbxcdn.com/180DAY-7d9af4e793401afe1376481a2f3ca6ef/768/432/Image/Png/noFilter",
+      "source_type": "official",
+      "checked_at": "2026-08-19T13:37:44Z",
+      "confidence": "high"
+    },
+    {
+      "id": "fact-007",
+      "category": "progression",
+      "subject": "progression",
+      "claim": "Official media labels weapons with per-second income figures, including a low and a much higher example, making the displayed income rate a visible comparison signal.",
+      "source_url": "https://thumbnails.roblox.com/v1/games/multiget/thumbnails?universeIds=10625493331&countPerUniverse=10&defaults=true&size=768x432&format=Png&isCircular=false",
+      "evidence_url": "https://tr.rbxcdn.com/180DAY-7d9af4e793401afe1376481a2f3ca6ef/768/432/Image/Png/noFilter",
+      "source_type": "official",
+      "checked_at": "2026-08-19T13:37:44Z",
+      "confidence": "high"
+    },
+    {
+      "id": "fact-008",
+      "category": "gameplay",
+      "subject": "gameplay",
+      "claim": "A second official experience image presents a weapon emerging from a box, indicating that boxed weapon rewards are part of the game's official presentation.",
+      "source_url": "https://thumbnails.roblox.com/v1/games/multiget/thumbnails?universeIds=10625493331&countPerUniverse=10&defaults=true&size=768x432&format=Png&isCircular=false",
+      "evidence_url": "https://tr.rbxcdn.com/180DAY-22953b50506d6d06460efcb066c95271/768/432/Image/Png/noFilter",
+      "source_type": "official",
+      "checked_at": "2026-08-19T13:37:44Z",
+      "confidence": "medium"
+    },
+    {
+      "id": "fact-009",
+      "category": "gameplay",
+      "subject": "gameplay",
+      "claim": "The experience supports up to 12 players in a server.",
+      "source_url": "https://games.roblox.com/v1/games?universeIds=10625493331",
+      "source_type": "official",
+      "checked_at": "2026-08-19T13:36:49Z",
+      "confidence": "high"
+    },
+    {
+      "id": "fact-010",
+      "category": "faq",
+      "subject": "faq",
+      "claim": "The experience has an enabled Roblox badge named Welcome.",
+      "source_url": "https://badges.roblox.com/v1/universes/10625493331/badges?limit=100&sortOrder=Asc",
+      "source_type": "official",
+      "checked_at": "2026-08-19T13:37:18Z",
+      "confidence": "high"
+    }
+  ],
+  "new_player_guide": {
+    "first_10_minutes": [
+      "Identify the per-second income label shown on the weapon you currently hold before evaluating any offer.",
+      "When a trade panel appears, compare both weapon panels and their visible income labels before accepting or declining.",
+      "Treat boxed weapon rewards as possible collection upgrades, but verify the live UI because the official media does not document probabilities or exact controls."
+    ],
+    "core_loop": [
+      "Acquire or hold a weapon.",
+      "Read its displayed per-second income signal.",
+      "Compare it with the weapon shown on the other side of a trade.",
+      "Accept only after the visible offer matches what you intend to receive; otherwise decline.",
+      "Repeat while seeking stronger displayed income output."
+    ],
+    "progression_path": [
+      "Start by learning where the live interface shows weapon income.",
+      "Prefer clearly verifiable improvements over visually flashy but unverified offers.",
+      "Build a personal record of observed weapon names and rates because no official value list was found."
+    ],
+    "common_mistakes": [
+      "Accepting before checking both sides of the offer.",
+      "Assuming a weapon's appearance proves its income value.",
+      "Trusting unofficial codes, value tables, rarity names, or crate odds that are not documented by the creator.",
+      "Confusing place ID 124993558819856 with universe ID 10625493331."
+    ],
+    "faq": [
+      "Who made Trade Weapons? Roblox lists Jew Trade & Clothing LLC as the creator group.",
+      "What is the Roblox game ID? The root place ID is 124993558819856.",
+      "Does Trade Weapons include trading? Official media depicts weapon-for-weapon offers with accept and decline controls.",
+      "Are there verified codes or an official value list? No creator-controlled source for either was found during this review."
+    ]
+  },
+  "keywords": {
+    "primary": [
+      "Trade Weapons Roblox",
+      "Trade Weapons guide",
+      "Trade Weapons wiki"
+    ],
+    "secondary": [
+      "Trade Weapons beginner guide",
+      "Trade Weapons trading guide",
+      "Trade Weapons values",
+      "Trade Weapons codes"
+    ],
+    "search_intent": [
+      "learn the verified core loop",
+      "avoid bad trades",
+      "identify the official game",
+      "check whether codes or values are verified"
+    ]
+  },
+  "uncertainties": [
+    "The experience description does not document detailed controls, weapon names, rarities, currencies, box probabilities, upgrades, rebirths, codes, or a value list.",
+    "Official images establish visible interface concepts but do not prove every live interaction step; the site must label cautious guidance as advice and avoid invented button sequences.",
+    "Live statistics such as player count and visits change continuously and should not be published as durable guide facts."
+  ],
+  "forbidden_claims": [
+    "Any exact weapon name, rarity, value, demand score, or tier ranking not present in an approved source.",
+    "Any active code, code redemption path, reward amount, or release schedule.",
+    "Any exact crate odds, box prices, guaranteed rewards, upgrade costs, rebirth mechanics, quests, pets, zones, or combat systems.",
+    "Any claim that this independent guide is official, endorsed by Roblox, or operated by the creator.",
+    "Any promise that a trade is fair based only on appearance."
+  ],
+  "suggested_topics": [
+    "Verified beginner checklist",
+    "How to read a trade offer safely",
+    "Progression through visible income signals",
+    "Common mistakes and scam-resistant habits",
+    "Verified facts, IDs, and source transparency",
+    "Codes and values status page that clearly reports when no official source is available"
+  ]
+}
