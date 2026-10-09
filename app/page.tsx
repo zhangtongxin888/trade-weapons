@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SiteChrome } from "./_components/SiteChrome";
 import { ROBLOX_URL } from "./_lib/site";
+import { AdSlot, AdsterraRuntime } from "./_components/AdsterraSlots";
 
 export const metadata: Metadata = {
   title: "Trade Weapons Guide — Start Trading With Verified Facts",
@@ -46,6 +47,7 @@ export default function Home() {
   return (
     <SiteChrome>
       <main id="main-content">
+      <AdSlot slot="top" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-copy">
@@ -69,6 +71,7 @@ export default function Home() {
             <div className="decision-row"><span className="decision decline">Decline if unclear</span><span className="decision accept">Accept after review</span></div>
           </div>
         </section>
+      <AdSlot slot="mid" />
 
         <section className="proof-strip" id="verified-facts" aria-label="Verified game facts">
           <div><span>Official game</span><strong>Trade Weapons</strong></div>
@@ -119,7 +122,9 @@ export default function Home() {
           <div><p className="section-kicker">Source transparency</p><h2>Ten approved facts. Zero room for invented mechanics.</h2><p>Review every official API, media URL, confidence label, and publishing boundary behind this guide.</p></div>
           <div className="source-banner-actions"><a className="button button-primary" href="/sources/">Open the source ledger →</a><a className="text-link" href={ROBLOX_URL} rel="noreferrer" target="_blank">Official game ↗</a></div>
         </section>
-      </main>
+            <AdSlot slot="bottom" />
+      <AdsterraRuntime />
+    </main>
     </SiteChrome>
   );
 }

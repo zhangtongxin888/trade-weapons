@@ -18,6 +18,7 @@ const sources = [
 export default function Sources() {
   return (
     <GuidePage
+      ads={false}
       eyebrow="Source ledger · Checked August 19, 2026"
       title="Every durable claim starts here."
       intro="We reviewed live Roblox APIs and official experience media. The table records what each source supports, how confident the wording can be, and where this guide deliberately stops."

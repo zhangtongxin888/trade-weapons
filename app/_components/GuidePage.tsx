@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { SiteChrome } from "./SiteChrome";
+import { AdSlot, AdsterraRuntime } from "./AdsterraSlots";
 
 type GuidePageProps = {
   eyebrow: string;
@@ -7,18 +8,21 @@ type GuidePageProps = {
   intro: string;
   children: ReactNode;
   related: { href: string; label: string; description: string }[];
+  ads?: boolean;
 };
 
-export function GuidePage({ eyebrow, title, intro, children, related }: GuidePageProps) {
+export function GuidePage({ eyebrow, title, intro, children, related, ads = true }: GuidePageProps) {
   return (
     <SiteChrome>
       <main id="main-content" className="guide-main">
+        {ads ? <AdSlot slot="top" /> : null}
         <header className="guide-hero">
           <p className="eyebrow">{eyebrow}</p>
           <h1>{title}</h1>
           <p className="guide-intro">{intro}</p>
           <div className="verified-pill"><span aria-hidden="true">✓</span> Built only from approved facts and clearly labeled advice</div>
         </header>
+        {ads ? <AdSlot slot="mid" /> : null}
         <div className="guide-layout">
           <article className="guide-article">{children}</article>
           <aside className="guide-aside" aria-label="Related guides">
@@ -36,6 +40,8 @@ export function GuidePage({ eyebrow, title, intro, children, related }: GuidePag
             </div>
           </aside>
         </div>
+        {ads ? <AdSlot slot="bottom" /> : null}
+        {ads ? <AdsterraRuntime /> : null}
       </main>
     </SiteChrome>
   );
